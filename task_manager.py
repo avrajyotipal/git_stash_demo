@@ -17,7 +17,7 @@ def show_tasks():
 
 
 def main():
-    print("Task Manager")
+    print("Task Manager implemented")
 
     while True:
         print("\n1. Add Task")

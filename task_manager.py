@@ -1,9 +1,13 @@
 tasks = []
 
 
-def add_task(task):
-    tasks.append(task)
-    print(f"Task added: {task}")
+def add_task(task, priority="Medium"):
+    tasks.append({
+        "task": task,
+        "priority": priority
+    })
+
+    print(f"Task added: {task} | Priority: {priority}")
 
 
 def show_tasks():
@@ -12,8 +16,13 @@ def show_tasks():
         return
 
     print("\nTasks:")
+
     for index, task in enumerate(tasks, start=1):
-        print(f"{index}. {task}")
+        print(
+            f"{index}. {task['task']} "
+            f"[Priority: {task['priority']}]"
+        )
+
 
 
 def main():
